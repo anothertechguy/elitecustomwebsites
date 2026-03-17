@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import StorySection from '@/components/StorySection';
 import Services from '@/components/Services';
 import Archive from '@/components/Archive';
 import Process from '@/components/Process';
@@ -12,6 +13,7 @@ const Index = () => {
       <ScrollProgress />
       <Navbar />
       <Hero />
+      <StorySection />
       <Services />
       <Archive />
       <Process />
