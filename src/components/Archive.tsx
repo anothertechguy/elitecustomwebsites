@@ -58,17 +58,17 @@ function BrowserMockup() {
           <div className="relative overflow-hidden" style={{ height: 'clamp(200px, 28vw, 380px)' }}>
             <motion.div style={{ y: imgY }} className="will-change-transform">
               <img
-                src="/dr-heavenly-hero.png"
+                src={`${import.meta.env.BASE_URL}dr-heavenly-hero.png`}
                 alt="Dr. Heavenly For Georgia"
                 className="w-full h-auto block"
               />
               <img
-                src="/dr-heavenly-portrait.png"
+                src={`${import.meta.env.BASE_URL}dr-heavenly-portrait.png`}
                 alt="Dr. Heavenly Portrait"
                 className="w-full h-auto block"
               />
               <img
-                src="/dr-heavenly-vocal.png"
+                src={`${import.meta.env.BASE_URL}dr-heavenly-vocal.png`}
                 alt="Dr. Heavenly Leadership"
                 className="w-full h-auto block"
               />
