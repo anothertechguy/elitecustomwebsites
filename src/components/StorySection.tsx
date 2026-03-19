@@ -65,8 +65,8 @@ export default function StorySection() {
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-16 border-t border-foreground/[0.06]">
           {[
-            { number: '147', label: 'Digital legacies built' },
-            { number: '$2.8B', label: 'Client valuation represented' },
+            { number: '40+', label: 'Combined years in tech' },
+            { number: '4', label: 'Former Big Tech engineers' },
             { number: '12', label: 'Engagements per year' },
             { number: '100%', label: 'Referral-based growth' },
           ].map((stat, i) => (

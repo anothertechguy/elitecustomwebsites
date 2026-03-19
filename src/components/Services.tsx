@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const eliteEase = [0.23, 1, 0.32, 1] as const;
 
@@ -7,21 +8,25 @@ const services = [
     title: 'Web\nDevelopment',
     description: 'Story-driven websites and premium digital products engineered for lasting impact. React, Next.js, WebGL — whatever the vision demands.',
     number: '01',
+    slug: '/services/web-development',
   },
   {
     title: 'Brand\nIdentity',
     description: 'Strategic visual identities designed to secure a premium market position. From naming to full design systems.',
     number: '02',
+    slug: '/services/brand-identity',
   },
   {
     title: '3D &\nMotion',
     description: 'Cinematic 3D environments, scroll-driven narratives, and micro-interactions that make your brand unforgettable.',
     number: '03',
+    slug: '/services/3d-motion',
   },
   {
     title: 'Digital\nStrategy',
     description: 'Data-informed growth architecture. SEO, analytics, and conversion optimization built into every pixel.',
     number: '04',
+    slug: '/services/digital-strategy',
   },
 ];
 
@@ -65,7 +70,7 @@ export default function Services() {
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.8, delay: i * 0.08, ease: eliteEase }}
             >
-              <div className="group cursor-pointer py-10 md:py-14 border-t border-foreground/[0.06] flex flex-col md:flex-row md:items-center gap-6 md:gap-16 hover:pl-4 transition-all duration-700">
+              <Link to={service.slug} className="group cursor-pointer py-10 md:py-14 border-t border-foreground/[0.06] flex flex-col md:flex-row md:items-center gap-6 md:gap-16 hover:pl-4 transition-all duration-700 block">
                 {/* Number */}
                 <span className="font-mono text-xs text-muted-foreground shrink-0 w-8">{service.number}</span>
 
@@ -86,7 +91,7 @@ export default function Services() {
                 <div className="shrink-0 w-8 h-8 rounded-full border border-foreground/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-500">
                   <span className="text-foreground text-xs">→</span>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
