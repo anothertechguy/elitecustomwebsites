@@ -4,70 +4,69 @@ const eliteEase = [0.23, 1, 0.32, 1] as const;
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-[20vh] px-6 md:px-12 overflow-hidden">
-      {/* Massive ambient blobs for the finale */}
-      <div className="blob blob-violet w-[800px] h-[800px] top-0 left-1/4 animate-drift" />
-      <div className="blob blob-magenta w-[600px] h-[600px] bottom-20 right-1/4 animate-drift" style={{ animationDelay: '-12s' }} />
-      <div className="blob blob-coral w-[500px] h-[500px] top-1/3 -right-40 animate-pulse-glow" />
-      <div className="blob blob-cyan w-[400px] h-[400px] bottom-40 -left-40 animate-pulse-glow" style={{ animationDelay: '-6s' }} />
+    <section id="contact" className="relative py-20 md:py-28 px-6 md:px-12">
+      <div className="divider mb-20" />
+
+      {/* Subtle ambient glow */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.03] pointer-events-none"
+        style={{ background: 'radial-gradient(circle, hsl(var(--accent-warm)), transparent 70%)' }}
+      />
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
+        {/* Section tag */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-4 mb-10"
+          className="flex items-center justify-center gap-4 mb-12"
         >
-          <div className="w-12 h-px bg-gradient-to-r from-transparent via-violet to-transparent" />
-          <span className="font-mono-ui text-violet tracking-[0.2em]">Chapter 05</span>
-          <div className="w-12 h-px bg-gradient-to-r from-violet via-transparent to-transparent" />
+          <div className="w-10 h-px bg-accent-warm" />
+          <span className="font-mono text-[11px] text-muted-foreground tracking-[0.25em] uppercase">Contact</span>
+          <div className="w-10 h-px bg-accent-warm" />
         </motion.div>
 
+        {/* Big CTA headline */}
         <motion.h2
-          initial={{ opacity: 0, y: 50, scale: 0.95 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: eliteEase }}
-          className="font-display text-foreground mb-8"
-          style={{ fontSize: 'clamp(2.5rem, 7vw, 9rem)', lineHeight: 0.88 }}
+          className="font-display text-foreground mb-10"
+          style={{ fontSize: 'clamp(2.5rem, 7vw, 8rem)', lineHeight: 0.95 }}
         >
-          Ready to build
+          Let's build something
           <br />
-          something
-          <br />
-          <span className="text-gradient-rainbow">extraordinary</span>
+          <em className="text-gradient-warm">extraordinary.</em>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-muted-foreground text-base max-w-md mx-auto mb-14 leading-relaxed"
+          transition={{ delay: 0.3 }}
+          className="text-muted-foreground text-base font-body font-light max-w-md mx-auto mb-14 leading-relaxed"
         >
           We accept a limited number of engagements each quarter.
-          Share your vision and we will determine if there is alignment.
+          Share your vision and we'll determine if there's alignment.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6, ease: eliteEase }}
+          transition={{ delay: 0.5, ease: eliteEase }}
           className="flex gap-5 justify-center flex-wrap"
         >
           <a
             href="mailto:hello@elitecustom.dev"
-            className="rounded-full px-10 py-5 font-mono-ui text-primary-foreground cursor-pointer inline-block transition-all duration-500 hover:scale-105 hover:shadow-[0_0_100px_-10px_hsl(265_90%_65%_/_0.5)]"
-            style={{
-              background: 'linear-gradient(135deg, hsl(265 90% 65%), hsl(340 85% 60%), hsl(15 90% 62%))',
-            }}
+            className="font-body text-sm text-primary-foreground bg-foreground rounded-full px-10 py-4 hover:scale-105 transition-transform duration-500"
           >
             Request Access
           </a>
           <a
             href="mailto:hello@elitecustom.dev"
-            className="glass-violet rounded-full px-10 py-5 font-mono-ui text-foreground cursor-pointer inline-block transition-all duration-500 hover:scale-105"
+            className="font-body text-sm text-foreground border border-foreground/20 rounded-full px-10 py-4 hover:border-foreground/60 transition-all duration-500"
           >
             View Process
           </a>
@@ -75,13 +74,16 @@ export default function Contact() {
       </div>
 
       {/* Footer */}
-      <div className="max-w-7xl mx-auto mt-[20vh] pt-8 relative z-10 border-t border-foreground/[0.06] flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="font-mono-ui text-muted-foreground">
+      <div className="max-w-7xl mx-auto mt-20 pt-8 relative z-10 border-t border-foreground/[0.06] flex flex-col md:flex-row justify-between items-center gap-6">
+        <p className="font-mono text-[11px] text-muted-foreground tracking-wide">
           © 2026 Elite Custom Websites
         </p>
         <div className="flex gap-8">
           {['Twitter', 'LinkedIn', 'Dribbble'].map((link) => (
-            <span key={link} className="font-mono-ui text-muted-foreground cursor-pointer hover:text-violet transition-colors duration-500">
+            <span
+              key={link}
+              className="font-mono text-[11px] text-muted-foreground tracking-wide cursor-pointer hover:text-foreground transition-colors duration-500"
+            >
               {link}
             </span>
           ))}

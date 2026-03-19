@@ -4,81 +4,83 @@ const eliteEase = [0.23, 1, 0.32, 1] as const;
 
 export default function StorySection() {
   return (
-    <section id="story" className="relative py-[15vh] px-6 md:px-12 overflow-hidden">
-      {/* Background blobs */}
-      <div className="blob blob-cyan w-[500px] h-[500px] top-20 -left-60 animate-drift" />
-      <div className="blob blob-amber w-[400px] h-[400px] bottom-0 right-10 animate-drift" style={{ animationDelay: '-10s' }} />
+    <section id="about" className="relative py-20 md:py-28 px-6 md:px-12">
+      <div className="divider mb-20" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        {/* Chapter label */}
+      <div className="max-w-7xl mx-auto">
+        {/* Section tag */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: eliteEase }}
-          className="flex items-center gap-4 mb-12"
+          className="flex items-center gap-4 mb-16"
         >
-          <div className="w-12 h-px bg-gradient-to-r from-magenta to-coral" />
-          <span className="font-mono-ui text-magenta tracking-[0.2em]">Chapter 01</span>
+          <div className="w-10 h-px bg-accent-warm" />
+          <span className="font-mono text-[11px] text-muted-foreground tracking-[0.25em] uppercase">About</span>
         </motion.div>
 
         {/* Big storytelling headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: eliteEase }}
-          className="font-display text-foreground mb-16"
-          style={{ fontSize: 'clamp(2.5rem, 6vw, 7rem)', lineHeight: 0.95 }}
-        >
-          Every pixel is a
-          <br />
-          <span className="text-gradient-sunset">conscious decision</span>
-        </motion.h2>
-
-        {/* Two column storytelling */}
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+        <div className="grid md:grid-cols-12 gap-12 md:gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2, ease: eliteEase }}
+            transition={{ duration: 1.2, ease: eliteEase }}
+            className="md:col-span-7"
           >
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              We began as three obsessive designers who believed the internet deserved better. 
-              Not more websites — better <span className="text-coral font-medium">experiences</span>.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h2
+              className="font-display text-foreground leading-[1.05]"
+              style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}
+            >
+              We started as three
+              <br />
+              obsessives who believed
+              <br />
+              the internet deserved
+              <br />
+              <em className="text-gradient-warm">better craft.</em>
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3, ease: eliteEase }}
+            className="md:col-span-5 flex flex-col justify-end"
+          >
+            <p className="text-muted-foreground text-base font-body font-light leading-relaxed mb-8">
               Today, we are the silent force behind digital presences that move markets, 
-              shape perceptions, and build <span className="text-amber font-medium">legacies</span>.
+              shape perceptions, and build legacies. Our team is comprised of former engineers 
+              from Google, Apple, and Meta — each bringing Silicon Valley rigor to 
+              bespoke digital artistry.
+            </p>
+            <p className="text-muted-foreground text-base font-body font-light leading-relaxed">
+              We accept only 12 engagements per year. Every project receives our 
+              undivided obsession.
             </p>
           </motion.div>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4, ease: eliteEase }}
-            className="flex flex-col gap-8"
-          >
-            {[
-              { number: '147', label: 'Digital Legacies Built', color: 'text-violet' },
-              { number: '$2.8B', label: 'Client Valuation Represented', color: 'text-coral' },
-              { number: '12', label: 'Accepted Per Year', color: 'text-amber' },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 + i * 0.15, ease: eliteEase }}
-                className="flex items-baseline gap-4"
-              >
-                <span className={`font-display text-4xl md:text-5xl ${stat.color}`}>{stat.number}</span>
-                <span className="text-muted-foreground text-sm">{stat.label}</span>
-              </motion.div>
-            ))}
-          </motion.div>
+        {/* Stats row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-16 border-t border-foreground/[0.06]">
+          {[
+            { number: '147', label: 'Digital legacies built' },
+            { number: '$2.8B', label: 'Client valuation represented' },
+            { number: '12', label: 'Engagements per year' },
+            { number: '100%', label: 'Referral-based growth' },
+          ].map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: i * 0.1, ease: eliteEase }}
+            >
+              <span className="font-display text-3xl md:text-4xl text-foreground">{stat.number}</span>
+              <p className="text-muted-foreground text-xs font-mono mt-2 tracking-wide uppercase">{stat.label}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

@@ -5,53 +5,45 @@ const eliteEase = [0.23, 1, 0.32, 1] as const;
 const steps = [
   {
     phase: 'Discovery',
-    description: 'We dissect your vision, market position, and competitive landscape to establish an unassailable strategic foundation.',
     number: '01',
-    color: 'violet',
-    gradient: 'text-gradient-ocean',
-    blobClass: 'blob-violet',
+    description: 'Deep immersion into your vision, market, and competitive landscape. We dissect everything before designing anything.',
+    duration: '1-2 Weeks',
   },
   {
     phase: 'Architecture',
-    description: 'Every pixel, interaction, and transition is blueprinted with surgical precision before a single line of code is written.',
     number: '02',
-    color: 'magenta',
-    gradient: 'text-gradient-sunset',
-    blobClass: 'blob-magenta',
+    description: 'Every pixel, interaction, and transition is blueprinted with surgical precision. Nothing is accidental.',
+    duration: '2-3 Weeks',
   },
   {
     phase: 'Engineering',
-    description: 'Bespoke development using cutting-edge frameworks, 3D rendering, and performance-obsessive engineering standards.',
     number: '03',
-    color: 'cyan',
-    gradient: 'text-gradient-aurora',
-    blobClass: 'blob-cyan',
+    description: 'Bespoke development using cutting-edge frameworks, 3D rendering engines, and performance-obsessive standards.',
+    duration: '4-8 Weeks',
   },
   {
-    phase: 'Launch',
-    description: 'Deployment is merely the beginning. Continuous refinement, analytics, and evolution ensure lasting digital dominance.',
+    phase: 'Launch & Evolve',
     number: '04',
-    color: 'amber',
-    gradient: 'text-gradient-rainbow',
-    blobClass: 'blob-amber',
+    description: 'Deployment is merely the beginning. Continuous refinement, analytics, and evolution ensure lasting digital dominance.',
+    duration: 'Ongoing',
   },
 ];
 
 export default function Process() {
   return (
-    <section className="relative py-[15vh] px-6 md:px-12 overflow-hidden">
-      <div className="blob blob-coral w-[600px] h-[600px] top-1/3 -right-60 animate-drift" />
-      <div className="blob blob-lime w-[400px] h-[400px] bottom-40 -left-40 animate-pulse-glow" />
+    <section id="process" className="relative py-20 md:py-28 px-6 md:px-12">
+      <div className="divider mb-20" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto">
+        {/* Section tag */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="flex items-center gap-4 mb-6"
         >
-          <div className="w-12 h-px bg-gradient-to-r from-cyan to-lime" />
-          <span className="font-mono-ui text-cyan tracking-[0.2em]">Chapter 04</span>
+          <div className="w-10 h-px bg-accent-glow" />
+          <span className="font-mono text-[11px] text-muted-foreground tracking-[0.25em] uppercase">Process</span>
         </motion.div>
 
         <motion.h2
@@ -60,57 +52,44 @@ export default function Process() {
           viewport={{ once: true }}
           transition={{ duration: 1, ease: eliteEase }}
           className="font-display text-foreground mb-24"
-          style={{ fontSize: 'clamp(2.5rem, 5vw, 6rem)', lineHeight: 0.95 }}
+          style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)', lineHeight: 1.05 }}
         >
-          How the
+          How the magic
           <br />
-          <span className="text-gradient-aurora">magic unfolds</span>
+          <em className="italic" style={{ color: 'hsl(var(--accent-glow))' }}>unfolds.</em>
         </motion.h2>
 
-        <div className="space-y-0">
+        {/* Process grid — two columns */}
+        <div className="grid md:grid-cols-2 gap-6">
           {steps.map((step, i) => (
             <motion.div
-              key={step.phase}
+              key={step.number}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: eliteEase }}
-              className="relative group"
             >
-              {/* Divider line */}
-              <div className={`h-px bg-gradient-to-r from-${step.color}/30 via-${step.color}/10 to-transparent`} />
-              
-              <div className="py-12 md:py-16 flex flex-col md:flex-row md:items-center gap-6 md:gap-16 relative overflow-hidden">
-                {/* Hover blob */}
-                <div className={`blob ${step.blobClass} w-[300px] h-[300px] top-0 left-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
-                
-                <div className="relative z-10 shrink-0">
-                  <span
-                    className={`font-display ${step.gradient}`}
-                    style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}
-                  >
-                    {step.number}
-                  </span>
-                </div>
+              <div className="animated-border-wrapper h-full">
+                <div className="animated-border-inner p-8 md:p-12 h-full flex flex-col">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-8">
+                    <span className="font-mono text-xs text-muted-foreground">{step.number}</span>
+                    <span className="font-mono text-[10px] text-muted-foreground tracking-[0.2em] uppercase border border-foreground/[0.06] rounded-full px-3 py-1">{step.duration}</span>
+                  </div>
 
-                <div className="relative z-10 flex-1">
-                  <h3
-                    className="font-display text-foreground mb-3 group-hover:text-gradient-rainbow transition-colors duration-500"
-                    style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', lineHeight: 1 }}
-                  >
+                  {/* Phase name */}
+                  <h3 className="font-display text-foreground text-2xl md:text-3xl mb-4">
                     {step.phase}
                   </h3>
-                  <p className="text-muted-foreground text-base leading-relaxed max-w-xl">{step.description}</p>
-                </div>
 
-                <div className="relative z-10 shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
-                  <span className={`font-mono-ui text-${step.color}`}>→</span>
+                  {/* Description */}
+                  <p className="text-muted-foreground text-sm font-body font-light leading-relaxed mt-auto">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             </motion.div>
           ))}
-          {/* Final divider */}
-          <div className="h-px bg-gradient-to-r from-amber/30 via-amber/10 to-transparent" />
         </div>
       </div>
     </section>
