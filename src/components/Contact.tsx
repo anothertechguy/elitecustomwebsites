@@ -27,9 +27,9 @@ export default function Contact() {
           className="font-display text-foreground mb-10"
           style={{ fontSize: 'clamp(2.5rem, 7vw, 8rem)', lineHeight: 0.95 }}
         >
-          Your site, live
+          Your vision,
           <br />
-          <em className="text-gradient-warm">in 7 days.</em>
+          <em className="text-gradient-warm">brought to life.</em>
         </motion.h2>
 
         <motion.p
@@ -39,7 +39,7 @@ export default function Contact() {
           transition={{ delay: 0.3 }}
           className="text-muted-foreground text-base font-body font-light max-w-md mx-auto mb-14 leading-relaxed"
         >
-          Big Tech quality. Half the agency price. Let's talk.
+          Uncompromising quality. Friendly timelines. Let's make it happen.
         </motion.p>
 
         <motion.div

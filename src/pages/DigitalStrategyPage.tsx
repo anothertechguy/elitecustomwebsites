@@ -35,7 +35,7 @@ export default function DigitalStrategyPage() {
             Digital<br /><em style={{ color: 'hsl(var(--accent-glow))' }}>Strategy.</em>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-muted-foreground text-lg font-body font-light max-w-2xl leading-relaxed mb-10">
-            Data-driven growth architecture. SEO, paid media, and analytics baked into every pixel — at half the agency cost.
+            Data-driven growth architecture. SEO, paid media, and analytics baked into every pixel — expert growth strategy without the bloated retainers.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="flex flex-wrap gap-10">
             {[{ value: '340', unit: '%', label: 'Avg organic traffic increase' }, { value: '12', unit: 'x', label: 'Avg ROI on paid campaigns' }, { value: '<6', unit: 'mo', label: 'Time to results' }].map((s) => (
@@ -80,7 +80,7 @@ export default function DigitalStrategyPage() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto pt-12 border-t border-foreground/[0.06] text-center">
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-foreground text-3xl md:text-5xl mb-4">Ready to <em style={{ color: 'hsl(var(--accent-glow))' }}>grow?</em></motion.h2>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">Half the agency cost. Data-driven results.</motion.p>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">Data-driven results. Accessible pricing.</motion.p>
           <Link to="/contact" className="inline-block font-body text-sm text-primary-foreground bg-foreground rounded-full px-10 py-4 hover:scale-105 transition-transform duration-500">Start a Project →</Link>
         </div>
       </section>

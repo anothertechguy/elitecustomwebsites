@@ -5,7 +5,7 @@ import PageLayout from '@/components/PageLayout';
 const eliteEase = [0.23, 1, 0.32, 1] as const;
 
 const services = [
-  { title: 'Web Development', slug: '/services/web-development', number: '01', description: 'Custom websites and web apps. React, Next.js, e-commerce. Delivered in 7 days.', details: ['React & Next.js', 'E-Commerce', 'CMS Integration', 'Speed Optimization'] },
+  { title: 'Web Development', slug: '/services/web-development', number: '01', description: 'Custom websites and web apps. React, Next.js, e-commerce. Built in just 7 days.', details: ['React & Next.js', 'E-Commerce', 'CMS Integration', 'Speed Optimization'] },
   { title: 'Brand Identity', slug: '/services/brand-identity', number: '02', description: 'Logos, design systems, and guidelines that position you as the premium choice.', details: ['Logo Design', 'Design Systems', 'Brand Guidelines', 'Packaging'] },
   { title: '3D & Motion', slug: '/services/3d-motion', number: '03', description: 'Scroll animations, WebGL, and micro-interactions that captivate.', details: ['WebGL & Three.js', 'Scroll Animation', 'Motion Design', 'Product 3D'] },
   { title: 'Digital Strategy', slug: '/services/digital-strategy', number: '04', description: 'SEO, paid ads, and analytics that drive measurable growth.', details: ['SEO', 'Paid Media', 'Analytics', 'CRO'] },
@@ -29,13 +29,13 @@ export default function ServicesPage() {
             className="font-display text-foreground mb-8"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 7rem)', lineHeight: 0.95 }}
           >
-            Big Tech quality. 
+            World-class quality. 
             <br />
-            <em className="text-gradient-warm">Half the price.</em>
+            <em className="text-gradient-warm">Accessible pricing.</em>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-muted-foreground text-base font-body font-light max-w-xl leading-relaxed mb-20">
-            Former Amazon, Apple, Google & Meta engineers delivering luxury digital experiences in 7 days — at 50% less than traditional agencies.
+            A collective of industry veterans crafting luxury digital experiences in just 7 days, leaving the bloated agency fees behind.
           </motion.p>
 
           <div className="flex flex-col">

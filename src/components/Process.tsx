@@ -5,7 +5,7 @@ const eliteEase = [0.23, 1, 0.32, 1] as const;
 const steps = [
   { phase: 'Discovery', number: '01', description: 'We learn your vision, audience, and goals. No fluff — just a focused strategy session.', duration: 'Day 1' },
   { phase: 'Design', number: '02', description: 'High-fidelity mockups in Figma. You see exactly what you\'re getting before we code.', duration: 'Day 2-3' },
-  { phase: 'Build', number: '03', description: 'Senior engineers bring the design to life with clean, performant, production-ready code.', duration: 'Day 3-6' },
+  { phase: 'Build', number: '03', description: 'Our dedicated engineers bring the design to life with clean, performant, production-ready code.', duration: 'Day 3-6' },
   { phase: 'Launch', number: '04', description: 'QA, SEO checks, performance audit, and go-live. Support continues after launch.', duration: 'Day 7' },
 ];
 

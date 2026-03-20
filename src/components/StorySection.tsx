@@ -22,9 +22,9 @@ export default function StorySection() {
             className="md:col-span-7"
           >
             <h2 className="font-display text-foreground leading-[1.05]" style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}>
-              7 days. Half the cost.
+              Exceptional quality.
               <br />
-              <em className="text-gradient-warm">Zero compromise.</em>
+              <em className="text-gradient-warm">Delivered in a week.</em>
             </h2>
           </motion.div>
 
@@ -36,12 +36,12 @@ export default function StorySection() {
             className="md:col-span-5 flex flex-col justify-end"
           >
             <p className="text-muted-foreground text-base font-body font-light leading-relaxed mb-6">
-              We're former Amazon, Apple, Google, and Meta engineers who left Big Tech
-              to build a faster, leaner studio. No bloated teams. No months-long timelines.
+              We're a close-knit team of industry veterans who left the corporate world
+              to build a more personal studio. We skip the bloated teams and months-long timelines.
             </p>
             <p className="text-muted-foreground text-base font-body font-light leading-relaxed">
-              You get senior-only talent, obsessive craft, and a finished product
-              in 7 days — at half the price of traditional agencies.
+              You get our undivided expertise, obsessive craft, and a stunning 
+              finished product in just 7 days—for significantly less than typical digital agencies.
             </p>
           </motion.div>
         </div>
@@ -50,8 +50,8 @@ export default function StorySection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-16 border-t border-foreground/[0.06]">
           {[
             { number: '7', label: 'Days to launch' },
-            { number: '50%', label: 'Less than agencies' },
-            { number: '40+', label: 'Years Big Tech experience' },
+            { number: '50%', label: 'Less than typical agencies' },
+            { number: '40+', label: 'Years combined expertise' },
             { number: '100%', label: 'Referral-based growth' },
           ].map((stat, i) => (
             <motion.div

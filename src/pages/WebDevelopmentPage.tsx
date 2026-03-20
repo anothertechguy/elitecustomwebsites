@@ -24,7 +24,7 @@ const process = [
 ];
 
 const faqs = [
-  { q: 'How do you deliver in 7 days?', a: 'Senior-only team, no handoffs, no waiting on approvals from middle management. Our engineers design and build simultaneously. We\'ve refined our process to eliminate every ounce of waste.' },
+  { q: 'How do you deliver in 7 days?', a: 'An elite, tightly-knit team with no handoffs and no waiting on approvals from middle management. Our engineers design and build simultaneously. We\'ve refined our process to eliminate every ounce of waste.' },
   { q: 'What technologies do you use?', a: 'React, Next.js, TypeScript, Tailwind CSS, and Vercel/AWS for deployment. Shopify Plus for e-commerce. We pick the right tool for each project.' },
   { q: 'What does it cost?', a: 'Projects start at $8K for marketing sites and go up to $40K+ for complex apps. Roughly half what a traditional agency would charge for the same scope.' },
   { q: 'Do you offer ongoing support?', a: 'Yes. 30 days included. Monthly retainers available for ongoing development and optimization.' },
@@ -51,11 +51,11 @@ export default function WebDevelopmentPage() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-muted-foreground text-lg font-body font-light max-w-2xl leading-relaxed mb-12">
-            Luxury websites that rank, convert, and scale — built by former Big Tech engineers in 7 days, at half the agency cost.
+            High-performing websites that rank, convert, and scale. Built by industry experts in just 7 days, leaving the bloated agency fees behind.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="flex flex-wrap gap-10">
-            {[{ value: '7', suffix: 'days', label: 'Idea to launch' }, { value: '50', suffix: '%', label: 'Less than agencies' }, { value: '95', suffix: '+', label: 'Lighthouse score' }].map((s) => (
+            {[{ value: '7', suffix: 'days', label: 'From idea to launch' }, { value: '50', suffix: '%', label: 'Less than typical agencies' }, { value: '95', suffix: '+', label: 'Lighthouse score' }].map((s) => (
               <div key={s.label}>
                 <span className="font-display text-3xl md:text-5xl text-foreground">{s.value}</span>
                 <span className="text-accent-warm text-lg ml-0.5">{s.suffix}</span>
@@ -143,7 +143,7 @@ export default function WebDevelopmentPage() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto pt-12 border-t border-foreground/[0.06] text-center">
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-foreground text-3xl md:text-5xl mb-4">Ready? <em className="text-gradient-warm">Let's build.</em></motion.h2>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">7 days. Half the cost. Zero compromise.</motion.p>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">Exceptional quality. Delivered in a week.</motion.p>
           <Link to="/contact" className="inline-block font-body text-sm text-primary-foreground bg-foreground rounded-full px-10 py-4 hover:scale-105 transition-transform duration-500">Start a Project →</Link>
         </div>
       </section>

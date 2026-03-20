@@ -14,16 +14,16 @@ const team = [
 
 const values = [
   { title: 'Obsessive Quality', desc: 'We don\'t ship "good enough." Every pixel is deliberate.' },
-  { title: 'Silicon Valley DNA', desc: 'From Amazon, Apple, Google, and Meta — that engineering rigor in every project.' },
-  { title: 'Luxury Without Ego', desc: 'World-class output. No bloated overhead. Senior talent only.' },
+  { title: 'Engineering Rigor', desc: 'From Amazon, Apple, Google, and Meta — that engineering rigor in every project.' },
+  { title: 'Luxury Without Ego', desc: 'World-class output. No bloated overhead. Mastercraft talent only.' },
   { title: 'Results Over Awards', desc: 'We measure success by your growth, not industry trophies.' },
 ];
 
 const faqs = [
   { q: 'Where are you located?', a: 'Distributed team in U.S. time zones. Founder based in Denver, CO. We work with clients nationwide.' },
-  { q: 'How are you different?', a: 'Our team is from Amazon, Apple, Google, and Meta. We combine Big Tech rigor with creative ambition — at half the traditional agency cost.' },
+  { q: 'How are you different?', a: 'We combine enterprise-grade engineering rigor with boutique creative ambition. You get world-class craftsmanship at a much more accessible price point.' },
   { q: 'What clients do you work with?', a: 'Celebrities, political campaigns, luxury brands, and ambitious startups who care deeply about quality.' },
-  { q: 'How many projects at once?', a: 'Max 3 at any time (12 per year). Every client gets senior-level attention.' },
+  { q: 'How many projects at once?', a: 'Max 3 at any time (12 per year). Every client gets our undivided expertise.' },
 ];
 
 export default function AboutPage() {
@@ -40,7 +40,7 @@ export default function AboutPage() {
             Built different.<br /><em className="text-gradient-cool">By design.</em>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-muted-foreground text-lg font-body font-light max-w-2xl leading-relaxed mb-10">
-            Former Big Tech engineers delivering luxury digital experiences in 7 days — at half the agency price. No bloated teams. No months-long timelines.
+            We're a collective of industry veterans delivering luxury digital experiences in just 7 days—for a fraction of typical agency fees. No bloated teams, no months-long timelines.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="flex flex-wrap gap-10">
             {[{ value: '7', label: 'Days to launch' }, { value: '50%', label: 'Less than agencies' }, { value: '40+', label: 'Years Big Tech exp' }, { value: '100%', label: 'Referral growth' }].map((s) => (
@@ -105,7 +105,7 @@ export default function AboutPage() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto pt-12 border-t border-foreground/[0.06] text-center">
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-foreground text-3xl md:text-5xl mb-4">Let's build <em className="text-gradient-warm">together.</em></motion.h2>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">7 days. Half the cost. Zero compromise.</motion.p>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">Exceptional quality. Delivered in a week.</motion.p>
           <Link to="/contact" className="inline-block font-body text-sm text-primary-foreground bg-foreground rounded-full px-10 py-4 hover:scale-105 transition-transform duration-500">Get in Touch →</Link>
         </div>
       </section>

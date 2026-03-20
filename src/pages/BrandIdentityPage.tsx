@@ -47,7 +47,7 @@ export default function BrandIdentityPage() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-muted-foreground text-lg font-body font-light max-w-2xl leading-relaxed mb-10">
-            Visual identities that speak authority before a word is read. Delivered in 7 days. Half the agency cost.
+            Visual identities that command authority before a word is read. Delivered in just a week, without the premium agency markup.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="grid grid-cols-3 gap-8 max-w-md">
@@ -117,7 +117,7 @@ export default function BrandIdentityPage() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto pt-12 border-t border-foreground/[0.06] text-center">
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-foreground text-3xl md:text-5xl mb-4">Ready? <em className="text-gradient-cool">Let's brand.</em></motion.h2>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">7 days. Half the cost. Zero compromise.</motion.p>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">World-class branding. Delivered in a week.</motion.p>
           <Link to="/contact" className="inline-block font-body text-sm text-primary-foreground bg-foreground rounded-full px-10 py-4 hover:scale-105 transition-transform duration-500">Start a Project →</Link>
         </div>
       </section>

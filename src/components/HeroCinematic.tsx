@@ -52,7 +52,7 @@ export default function HeroCinematic() {
           </motion.h1>
         </motion.div>
 
-        {/* Subtitle — concise */}
+        {/* Subtitle — concise & friendly */}
         <motion.div style={{ y: subtitleY, opacity: headlineOpacity }}>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -60,8 +60,7 @@ export default function HeroCinematic() {
             transition={{ duration: 1, delay: 1, ease: eliteEase }}
             className="mt-10 text-muted-foreground text-base md:text-lg font-body font-light max-w-xl leading-relaxed"
           >
-            Luxury digital experiences. Delivered in 7 days.
-            Half the cost of traditional agencies. Former Big Tech team.
+            Unforgettable digital experiences, crafted with care. We bring your vision to life in just a week—at a fraction of the traditional agency schedule and price.
           </motion.p>
         </motion.div>
 

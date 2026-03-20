@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const eliteEase = [0.23, 1, 0.32, 1] as const;
 
 const services = [
-  { title: 'Web\nDevelopment', description: 'Websites & web apps that convert. React, Next.js, e-commerce — delivered in 7 days.', number: '01', slug: '/services/web-development' },
+  { title: 'Web\nDevelopment', description: 'Websites & web apps that convert. React, Next.js, e-commerce — crafted in a week.', number: '01', slug: '/services/web-development' },
   { title: 'Brand\nIdentity', description: 'Logos, design systems, and brand guidelines that command a premium position.', number: '02', slug: '/services/brand-identity' },
   { title: '3D &\nMotion', description: 'Scroll animations, WebGL, and micro-interactions that make your brand unforgettable.', number: '03', slug: '/services/3d-motion' },
   { title: 'Digital\nStrategy', description: 'SEO, paid media, and analytics that turn traffic into revenue.', number: '04', slug: '/services/digital-strategy' },

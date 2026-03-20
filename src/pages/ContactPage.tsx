@@ -12,7 +12,7 @@ const faqs = [
 ];
 
 const trustSignals = [
-  { title: 'Direct Communication', desc: 'No account managers or middlemen. You speak directly with the senior engineers and designers building your project.' },
+  { title: 'Direct Communication', desc: 'No account managers or middlemen. You speak directly with the dedicated experts building your project.' },
   { title: '24-Hour Response', desc: 'Every inquiry receives a thoughtful response within one business day. We value your time as much as we value ours.' },
   { title: 'Transparent Pricing', desc: 'Detailed proposals with clear scope, timeline, and cost breakdowns. No hidden fees. No scope creep surprises.' },
   { title: 'NDA-Ready', desc: 'We\'re prepared to sign an NDA before the first conversation. Your ideas and business information are always protected.' },

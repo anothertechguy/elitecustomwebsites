@@ -54,7 +54,7 @@ export default function ThreeDMotionPage() {
             3D &<br /><motion.em className="inline-block" style={{ color: 'hsl(var(--accent-warm))' }} animate={{ rotateX: [0, 5, 0], rotateY: [0, -3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>Motion.</motion.em>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="text-muted-foreground text-lg font-body font-light max-w-2xl leading-relaxed mb-10">
-            Experiences that feel alive. Scroll storytelling, 3D environments, and micro-interactions — engineered at 60fps. Half the agency cost.
+            Experiences that feel alive. Scroll storytelling, 3D environments, and micro-interactions — engineered at 60fps. Uncompromising quality without the agency markup.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="flex flex-wrap gap-10">
             {[{ value: '60', unit: 'fps', label: 'Render target' }, { value: '98', unit: '%', label: 'Browser support' }, { value: '40', unit: '%', label: 'Engagement lift' }].map((s) => (
@@ -115,7 +115,7 @@ export default function ThreeDMotionPage() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto pt-12 border-t border-foreground/[0.06] text-center">
           <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-foreground text-3xl md:text-5xl mb-4">Ready for <em className="text-gradient-warm">cinematic?</em></motion.h2>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">Half the agency cost. Twice the wow factor.</motion.p>
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-muted-foreground text-sm font-body font-light mb-8">Twice the wow factor. A fraction of the typical agency timeline.</motion.p>
           <Link to="/contact" className="inline-block font-body text-sm text-primary-foreground bg-foreground rounded-full px-10 py-4 hover:scale-105 transition-transform duration-500">Start a Project →</Link>
         </div>
       </section>
