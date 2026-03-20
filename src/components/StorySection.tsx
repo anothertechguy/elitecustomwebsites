@@ -8,18 +8,11 @@ export default function StorySection() {
       <div className="divider mb-20" />
 
       <div className="max-w-7xl mx-auto">
-        {/* Section tag */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex items-center gap-4 mb-16"
-        >
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex items-center gap-4 mb-16">
           <div className="w-10 h-px bg-accent-warm" />
           <span className="font-mono text-[11px] text-muted-foreground tracking-[0.25em] uppercase">About</span>
         </motion.div>
 
-        {/* Big storytelling headline */}
         <div className="grid md:grid-cols-12 gap-12 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -28,17 +21,10 @@ export default function StorySection() {
             transition={{ duration: 1.2, ease: eliteEase }}
             className="md:col-span-7"
           >
-            <h2
-              className="font-display text-foreground leading-[1.05]"
-              style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}
-            >
-              We started as three
+            <h2 className="font-display text-foreground leading-[1.05]" style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}>
+              7 days. Half the cost.
               <br />
-              obsessives who believed
-              <br />
-              the internet deserved
-              <br />
-              <em className="text-gradient-warm">better craft.</em>
+              <em className="text-gradient-warm">Zero compromise.</em>
             </h2>
           </motion.div>
 
@@ -49,25 +35,23 @@ export default function StorySection() {
             transition={{ duration: 1, delay: 0.3, ease: eliteEase }}
             className="md:col-span-5 flex flex-col justify-end"
           >
-            <p className="text-muted-foreground text-base font-body font-light leading-relaxed mb-8">
-              Today, we are the silent force behind digital presences that move markets, 
-              shape perceptions, and build legacies. Our team is comprised of former engineers 
-              from Google, Apple, and Meta — each bringing Silicon Valley rigor to 
-              bespoke digital artistry.
+            <p className="text-muted-foreground text-base font-body font-light leading-relaxed mb-6">
+              We're former Amazon, Apple, Google, and Meta engineers who left Big Tech
+              to build a faster, leaner studio. No bloated teams. No months-long timelines.
             </p>
             <p className="text-muted-foreground text-base font-body font-light leading-relaxed">
-              We accept only 12 engagements per year. Every project receives our 
-              undivided obsession.
+              You get senior-only talent, obsessive craft, and a finished product
+              in 7 days — at half the price of traditional agencies.
             </p>
           </motion.div>
         </div>
 
-        {/* Stats row */}
+        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-16 border-t border-foreground/[0.06]">
           {[
-            { number: '40+', label: 'Combined years in tech' },
-            { number: '4', label: 'Former Big Tech engineers' },
-            { number: '12', label: 'Engagements per year' },
+            { number: '7', label: 'Days to launch' },
+            { number: '50%', label: 'Less than agencies' },
+            { number: '40+', label: 'Years Big Tech experience' },
             { number: '100%', label: 'Referral-based growth' },
           ].map((stat, i) => (
             <motion.div
